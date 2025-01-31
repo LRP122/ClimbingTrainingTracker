@@ -7,6 +7,9 @@
 #include "esp_log.h"
 
 #include "wifi.h"
+#include "mqtt.h"
+
+#include "json.hpp"
 
 class Main final
 {
@@ -18,3 +21,12 @@ public:
     WIFI::Wifi::state_e wifiState { WIFI::Wifi::state_e::NOT_INITIALIZED };
     WIFI::Wifi Wifi;
 };
+
+enum GRIP_TYPES {
+    FOUR_FINGER_DRAG,
+    FOUR_FINGER_HALFCRIMP,
+    THREE_FINGER_DRAG,
+    THREE_FINGER_HALFCRIMP
+};
+
+void publish(GRIP_TYPES grip_type, esp_mqtt_client_handle_t client);
