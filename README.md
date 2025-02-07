@@ -1,17 +1,36 @@
-## ClimbingTrainingTracker
+#  Hangboard Training Tracker 
 
-This repo includes the code for a ClimbingTrainingTracker, with multiple tools for training better and tracking your process easily.
+## 🔥 Overview  
+Take your climbing training to the next level with a **smart Hangboard Training Tracker**! This ESP32-powered system logs your training sessions, tracks progress, and visualizes data in **real-time** using **Grafana, Node-RED, and InfluxDB** on a Raspberry Pi.  
 
-You can train and use the hardware for help with timing. Your training results will be sent to a server using MQTT, where it is stored with date, time and intensity. This allows easy tracking of the progress.
+🎯 **Key Features:**  
+✅ **Real-time Tracking** – Logs your training sessions instantly  
+✅ **MQTT Communication** – Seamless data transfer to the backend  
+✅ **Interrupt-Based Button Handling** – Ensures smooth and fast response  
+✅ **Data Visualization** – Track your progress with powerful charts  
+✅ **Lightweight & Efficient** – Runs on ESP32 with minimal power consumption  
+
+---
+
+## 🛠️ Tech Stack  
+| Component  | Technology Used |
+|------------|----------------|
+| **Microcontroller** | ESP32 + ESP-IDF |
+| **Communication** | MQTT |
+| **Backend** | Node-RED, InfluxDB |
+| **Visualization** | Grafana |
+| **Hardware** | Buttons with pull-up resistors, LEDs, Buzzer |
+
+---
+
+## ⚡ Getting Started  
+### 🔌 Hardware Setup  
+1️. Connect **three buttons** to ESP32 with pull-up resistors.  
+2️. Ensure ESP32 is powered and connected to Wi-Fi, you will have to add your password and network.  
+3. Build the backend to track
 
 
-
-It is written for the esp32 using the esp-idf. 
-
-# Hardware Setup
-
-You will need a esp32, a power source, some jumper cables ...
-
-# Hangboarding
-
-# Pullups
+### 🖥️ Software Setup  
+🚀 **Flash ESP32**:  
+```sh
+idf.py build flash monitor

@@ -65,13 +65,13 @@ void publish_hangboard_data(GRIP_TYPES grip_type, esp_mqtt_client_handle_t clien
             hangboard_data["tfd"] = 1;
             break;
         case THREE_FINGER_HALFCRIMP:
-            hangboard_data["tfh"] = 1;
+            hangboard_data["tfc"] = 1;
             break;
         case FOUR_FINGER_DRAG:
             hangboard_data["ffd"] = 1;
             break;
         case FOUR_FINGER_HALFCRIMP:
-            hangboard_data["ffh"] = 1;
+            hangboard_data["ffc"] = 1;
             break;
     }
 

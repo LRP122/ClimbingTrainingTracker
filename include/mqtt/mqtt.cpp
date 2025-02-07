@@ -13,7 +13,6 @@ void mqtt::mqtt_event_handler_hangboardroutine(void *handler_args, esp_event_bas
     switch ((esp_mqtt_event_id_t)event_id) {
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(ourTaskName, "MQTT_STATUS : CONNECTED\n");
-        msg_id = esp_mqtt_client_publish(client, "/training/hangboard", "One", 0, 1, 0);
         break;
     case MQTT_EVENT_DISCONNECTED:
         ESP_LOGI(ourTaskName, "MQTT_STATUS : DISCONNECTED\n");

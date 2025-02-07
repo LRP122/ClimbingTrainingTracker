@@ -29,4 +29,4 @@ enum GRIP_TYPES {
     THREE_FINGER_HALFCRIMP
 };
 
-void publish(GRIP_TYPES grip_type, esp_mqtt_client_handle_t client);
+void publish_hangboard_data(GRIP_TYPES grip_type, esp_mqtt_client_handle_t client);
