@@ -140,7 +140,7 @@ extern "C" void app_main()
     // Set initial output level
     gpio_set_level(sound_output, 0);
     gpio_set_level(busy_led_output, 0);
-    gpio_set_level(idle_led_output, 0);
+    gpio_set_level(idle_led_output, 1);
 
     interrputQueue = xQueueCreate(10, sizeof(int));
     xTaskCreate(hangboard_control_task, "HANGBOARD_Control_Task", 2048, NULL, 1, NULL);
